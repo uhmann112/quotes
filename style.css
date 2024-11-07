@@ -1,0 +1,105 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 1px;
+    background-image: linear-gradient(to right, #486b9c, #0e768e);
+    font-family: Arial, sans-serif;
+}
+
+#title {
+    justify-content: center;
+    padding: 20px;
+    margin-top: 30px;
+    
+    border-radius: 20px;
+    color: white;
+    font-size: 24px;
+    text-decoration: underline;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#text {
+    justify-content: center;
+    text-align: center;
+    
+    color: white;
+    min-height: 80px;
+    width: 80%;
+    max-width: 1000px;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    font-size: 18px;
+    
+}
+
+#link{
+    text-decoration: none;
+    color: white;
+}
+
+#quo, #quoLike {
+    margin-top: 40px;
+    min-height: 400px;
+    width: 80%;
+    padding: 30px;
+    background-image: linear-gradient(135deg, #4bc0c8, #c779d0, #feac5e);
+    border-radius: 25px;
+    font-size: 44px;
+    color: #efd4d4;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    background-size: 300% 300%;
+    animation: bgAni 9s ease infinite, hoverEffect 5s ease-in-out infinite alternate; /* Ensure both animations run */
+}
+
+@keyframes bgAni {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+  }
+
+  @keyframes hoverEffect {
+    0% { transform: translateY(0); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); }
+    50% { transform: translateY(-20px); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4); } /* Move up and increase shadow */
+    100% { transform: translateY(0); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); } /* Return to original position */
+}
+
+#buttonContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+#butt,#buttLike,#buttBack {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-image: linear-gradient(to right, #005bea, #00c6fb);
+    border-radius: 8px;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    height: 50px;
+    padding: 0 1.6rem;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+    transition: all 0.3s;
+}
+
+#butt, #buttLike, #buttBack :hover {
+    box-shadow: rgba(0, 182, 253, 0.4) 0 4px 15px;
+    transform: scale(1.05);
+}
+
